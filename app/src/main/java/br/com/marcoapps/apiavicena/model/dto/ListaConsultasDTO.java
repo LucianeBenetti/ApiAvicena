@@ -1,6 +1,8 @@
 package br.com.marcoapps.apiavicena.model.dto;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import br.com.marcoapps.apiavicena.model.vo.Consulta;
@@ -32,6 +34,7 @@ public class ListaConsultasDTO {
             c.setPaciente(listaConsultasDTO.get(i).getPacienteVO().getPaciente());
             c.setHorarioConsulta(listaConsultasDTO.get(i).getHorarioConsulta());
             c.setDataConsulta(listaConsultasDTO.get(i).getDataConsulta());
+            c.getDataConsulta().compareTo(listaConsultasDTO.get(i).getDataConsulta());
             c.setAtencaoEspecial(listaConsultasDTO.get(i).getAtencaoEspecial());
             c.setCodigoConsulta(listaConsultasDTO.get(i).getCodigoConsulta());
             consultas.add(c);

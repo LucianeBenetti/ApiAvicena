@@ -18,6 +18,8 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import java.lang.reflect.Type;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import br.com.marcoapps.apiavicena.R;
@@ -82,8 +84,12 @@ public class AgendaConsultasController {
                 List<ConsultaDTO> listConsultas = gson.fromJson(agendaEmJson, consultasListType);
                 ListaConsultasDTO listaConsultasDTO = new ListaConsultasDTO();
                 listaConsultasDTO.setListaConsultasDTO(listConsultas);
+
                 if (listaConsultasDTO != null) {
+
                     for (Consulta c:listaConsultasDTO.getConsultas()) {
+
+
                         try {
                             paciente = c.getPaciente();
                             pacienteDao.getDao().createOrUpdate(paciente);

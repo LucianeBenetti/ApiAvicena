@@ -15,7 +15,7 @@ import br.com.marcoapps.apiavicena.model.vo.Paciente;
 
 public class MyORMLiteHelper extends OrmLiteSqliteOpenHelper {
     private static final String DATABASE_NAME = "apiavicena";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 8;
 
     public MyORMLiteHelper(Context c) {
         super(c, DATABASE_NAME, null, DATABASE_VERSION);
