@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.List;
 
 import br.com.marcoapps.apiavicena.R;
@@ -40,12 +41,12 @@ public class AdapterConsulta extends BaseAdapter {
         return position;
     }
 
-    public void add (Consulta c){
+    public void add(Consulta c) {
         listConsultas.add(c);
         this.notifyDataSetChanged();
     }
 
-    public void remove (Consulta c){
+    public void remove(Consulta c) {
         listConsultas.remove(c);
         this.notifyDataSetChanged();
     }
@@ -63,7 +64,7 @@ public class AdapterConsulta extends BaseAdapter {
         TextView tvAtencaoEspecial = convertView.findViewById(R.id.tvAtencaoEspecial);
         //mandar dados para o layout
         tvNome.setText(consulta.getPaciente().getNomePaciente());
-        String data = (consulta.getDataConsulta().replaceAll("-","/"));
+        String data = (consulta.getDataConsulta().replaceAll("-", "/"));
         String[] s = data.split("/");
         String novaData = s[2] + "/" + s[1] + "/" + s[0];
         tvData.setText(novaData);

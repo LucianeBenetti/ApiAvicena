@@ -86,8 +86,8 @@ public class AgendaConsultasController {
                     for (Consulta c:listaConsultasDTO.getConsultas()) {
                         try {
                             paciente = c.getPaciente();
-                            pacienteDao.getDao().createIfNotExists(paciente);
-                            consultaDao.getDao().createIfNotExists(c);
+                            pacienteDao.getDao().createOrUpdate(paciente);
+                            consultaDao.getDao().createOrUpdate(c);
 
                         } catch (SQLException e) {
                             e.printStackTrace();
