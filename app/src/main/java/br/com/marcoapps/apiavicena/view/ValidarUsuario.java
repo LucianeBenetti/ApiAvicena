@@ -2,8 +2,11 @@ package br.com.marcoapps.apiavicena.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import br.com.marcoapps.apiavicena.R;
 import br.com.marcoapps.apiavicena.controller.UsuarioController;
